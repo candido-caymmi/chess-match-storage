@@ -5,7 +5,7 @@ const router = express.Router();
 // Get Matches
 router.get('/', async (req, res) => {
     const matches = await loadMatchesCollection();
-    res.send(await matches.find({}).toArray);
+    res.send(await matches.find({}));
 });
 
 async function loadMatchesCollection() {
